@@ -1,0 +1,96 @@
+.parent {
+    display: flex;
+    padding: 30px 20px;
+    /* border: 2px solid black; */
+  }
+  .childleft {
+    /* border: 2px solid black; */
+    width: 50%;
+   
+  }
+  .image_style{
+    /* object-fit: cover; */
+    width: 100%;
+    height: auto;
+  }
+  
+  .childright {
+    /* border: 2px solid black; */
+    padding: 0% 2%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+  }
+  
+  .childrightp1 {
+    /* width: 100%; */
+    /* border: 2px solid red; */
+    /* position: absolute; */
+    /* top: -6px; */
+    /* text-align: left; */
+    color: #1467db;
+  }
+  
+  .childrightp1 p {
+    font-weight: 990;
+    font-size: 2rem;
+  }
+  
+  .childrightp2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+  }
+  
+  .childrightp2 p {
+    padding-top: 15px;
+    font-size: medium;
+    line-height: 1.5rem;
+  }
+  .childrightbtn {
+    display: flex;
+    /* width: 100%; */
+    /* border: 2px solid #1467db; */
+    flex-direction: row-reverse;
+    height: 2.3rem;
+    margin-top: 0.5rem;
+    padding-right: 1rem;
+  }
+  .childrightbtn button {
+    width: 9rem;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    font-weight: bolder;
+    color: #1467db;
+    border: 1px solid #1467db;
+  }
+  .childrightbtn button::after {
+    content: "▶";
+    position: absolute;
+    left: 15px;
+    top: 20%;
+    font-weight: bolder ;
+    transition: left 0.3s ease-in;
+  }
+  .childrightbtn button:hover::after {
+    left: calc(80%);
+  }
+  .childrightbtn:hover::after {
+    content: "click to read more";
+      border: 1px solid black;;
+      padding: 2px 10px;
+      background-color: rgb(56, 50, 50);
+      position: absolute;
+      top: 100%;
+      color: white;
+  }
+@media (max-width: 960px) {
+  .parent{
+    flex-direction: column;
+  }
+  .childleft, .childright{
+    width: 100%;
+  }
+}
